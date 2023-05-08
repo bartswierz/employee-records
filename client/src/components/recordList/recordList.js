@@ -81,7 +81,7 @@ export default function RecordList() {
   // This following section will display the table with the records of individuals.
   return (
     <div className="recordlist-container">
-      <h3>Record List</h3>
+      <h3 className="record-list-header">Employee Records</h3>
       {/* <table className="table table-striped recordlist-container" style={{ marginTop: 20 }}> */}
       <table className="table recordlist-container" style={{ marginTop: 20 }}>
         <thead>

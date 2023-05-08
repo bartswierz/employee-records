@@ -7,7 +7,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import { NavLink } from "react-router-dom";
 import AddEmployeeIcon from "../icons/addIcon/addIcon";
 import "./navbar.styles.scss";
-// import AsteroidIcon from "../../../public/asteroid-icon.png";
 import AsteroidIcon from "../../assets/images/asteroid-icon.png";
 
 // In the navbar.js component, we will create a navigation bar that will link us to the required components using the following code.
@@ -20,8 +19,6 @@ export default function Navbar() {
         Polaris
         <div className="navbar-icon-container">
           <img src={AsteroidIcon} alt="asteroid" className="navbar-icon" />
-          {/* <img src="../../assets/images/asteroid-icon.png" alt="asteroid" className="navbar-icon" /> */}
-          {/* <img src="../../assets/images/asteroid-icon.png" alt="asteroid" className="navbar-icon" /> */}
         </div>
       </NavLink>
 

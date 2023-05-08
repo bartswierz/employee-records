@@ -1,3 +1,20 @@
 .recordlist-container {
   color: #fff;
+
+  .record-list-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // Remove border for the last row in database
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  td {
+    // display: flex;
+    // flex-direction: row;
+    vertical-align: middle;
+  }
 }
