@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./recordList.styles.scss";
 
 // The following code will serve as a viewing component for our records. It will fetch all the records in our database through a GET method.
 // const Record = (props) => (
@@ -79,9 +80,10 @@ export default function RecordList() {
 
   // This following section will display the table with the records of individuals.
   return (
-    <div>
+    <div className="recordlist-container">
       <h3>Record List</h3>
-      <table className="table table-striped" style={{ marginTop: 20 }}>
+      {/* <table className="table table-striped recordlist-container" style={{ marginTop: 20 }}> */}
+      <table className="table recordlist-container" style={{ marginTop: 20 }}>
         <thead>
           <tr>
             <th>Name</th>
