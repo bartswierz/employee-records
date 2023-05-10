@@ -28,9 +28,24 @@ export default function Create() {
     const newPerson = { ...form };
     console.log("newPerson: ", newPerson);
 
+    // // CHECK IF USER HAS FILLED OUT ALL FIELDS
+    // const isInputValid = () => {
+    //   if (form.name === "" || form.position === "" || form.level === "" || form.salary === "") {
+    //     window.alert("Please fill out all form fields");
+    //     return false;
+    //   }
+    //   return true;
+    // };
     // CHECK IF USER HAS FILLED OUT ALL FIELDS
     const isInputValid = () => {
-      if (form.name === "" || form.position === "" || form.level === "" || form.salary === "") {
+      if (
+        form.name === "" ||
+        !/^[a-zA-Z]+ [a-zA-Z]+$/.test(form.name) || // Check if name is a string of first and last name
+        form.position === "" ||
+        !/^[a-zA-Z]+$/.test(form.position) || // Check if position is a string
+        form.level === "" ||
+        isNaN(form.salary) // Check if salary is a number
+      ) {
         window.alert("Please fill out all form fields");
         return false;
       }
