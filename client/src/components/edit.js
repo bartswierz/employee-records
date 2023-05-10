@@ -7,6 +7,7 @@ export default function Edit() {
     name: "",
     position: "",
     level: "",
+    // salary: "",
     salary: 0,
     records: [],
   });
@@ -55,6 +56,7 @@ export default function Edit() {
       name: form.name,
       position: form.position,
       level: form.level,
+      salary: form.salary,
     };
 
     // This will send a post request to update the data in the database.
@@ -100,7 +102,9 @@ export default function Edit() {
             type="text"
             className="form-control"
             id="salary"
-            value={form.salary === 0 ? "" : form.salary}
+            // value={form.salary === 0 ? 0 : form.salary}
+            value={form.salary}
+            // placeholder={form.salary}
             onChange={(e) => updateForm({ salary: e.target.value })}
           />
         </div>

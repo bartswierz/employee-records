@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import "./create.styles.scss";
 
 // The following code will serve as a creating component for our records. Using this component, users can create a new record. This component will submit a create command to our server.
 export default function Create() {
@@ -7,7 +8,7 @@ export default function Create() {
     name: "",
     position: "",
     level: "",
-    salary: 0,
+    salary: "",
   });
   const navigate = useNavigate();
 
@@ -47,8 +48,9 @@ export default function Create() {
   // This following section will display the form that takes the input from the user.
   return (
     <div>
-      <h3>Create New Record</h3>
-      <form onSubmit={onSubmit}>
+      <h3 className="create-title">Create New Record</h3>
+      <form onSubmit={onSubmit} className="create-form-container">
+        {/* <div className="create-form-item-container"> */}
         {/* NAME */}
         <div className="form-group">
           <label htmlFor="name">Name</label>
@@ -84,7 +86,9 @@ export default function Create() {
             onChange={(e) => updateForm({ salary: e.target.value })}
           />
         </div>
-        <div className="form-group">
+
+        {/* RADIO */}
+        <div className="form-group create-level-container">
           {/* INTERN */}
           <div className="form-check form-check-inline">
             <input
@@ -133,9 +137,12 @@ export default function Create() {
             </label>
           </div>
         </div>
-        <div className="form-group">
-          <input type="submit" value="Create person" className="btn btn-primary" />
+
+        {/* SUBMIT */}
+        <div className="form-group create-submit-btn-container">
+          <input type="submit" value="Add Employee" className="btn btn-primary create-submit-btn" />
         </div>
+        {/* </div> */}
       </form>
     </div>
   );
