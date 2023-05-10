@@ -71,9 +71,9 @@ export default function Edit() {
     const isInputValid = () => {
       if (
         form.name === "" ||
-        !/^[a-zA-Z]+ [a-zA-Z]+$/.test(form.name) || // Check if name is a string of first and last name
+        !/^[a-zA-Z]+ [a-zA-Z]+$/.test(form.name) || // Check if name is a string of first and last name, requires two words
         form.position === "" ||
-        !/^[a-zA-Z]+$/.test(form.position) || // Check if position is a string
+        !/^([a-zA-Z]+ ){0,2}[a-zA-Z]+$/.test(form.position) || // Check if position is a string, allows 1-3 words position description
         form.level === "" ||
         isNaN(form.salary) // Check if salary is a number
       ) {
