@@ -1,9 +1,7 @@
 .recordlist-container {
   color: #fff;
 
-  th.action-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  th {
+    text-align: center;
   }
 }

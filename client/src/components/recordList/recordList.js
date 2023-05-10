@@ -86,10 +86,10 @@ export default function RecordList() {
       <table className="table recordlist-container" style={{ marginTop: 20 }}>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Level</th>
-            <th>Salary</th>
+            <th className="name-header">Name</th>
+            <th className="position-header">Position</th>
+            <th className="level-header">Level</th>
+            <th className="salary-header">Salary</th>
             <th className="action-header">Action</th>
           </tr>
         </thead>
