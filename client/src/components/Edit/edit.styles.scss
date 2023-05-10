@@ -1,0 +1,20 @@
+.edit-form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  row-gap: 10px;
+
+  .edit-level-container {
+    padding: 1rem;
+  }
+
+  .edit-submit-btn-container {
+    padding: 1rem;
+
+    .edit-submit-btn {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}

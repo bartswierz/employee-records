@@ -18,11 +18,28 @@
   background: rgba(12, 27, 45, 0.156);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.6px);
-  -webkit-backdrop-filter: blur(7.6px);
+  // backdrop-filter: blur(7.6px);
+  backdrop-filter: blur(57.6px);
+  // -webkit-backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(57.6px);
   border: 1px solid rgba(255, 255, 255, 0.48);
 }
 
 label {
   color: #0064fa;
+}
+
+h3 {
+  color: #0064fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+td {
+  vertical-align: middle;
 }

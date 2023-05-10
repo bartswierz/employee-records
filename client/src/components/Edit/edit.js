@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
-
+import "./edit.styles.scss";
 // The following code will serve as an editing component for our records. It will use a similar layout to the create component and will eventually submit an update command to our server.
 export default function Edit() {
   const [form, setForm] = useState({
@@ -75,7 +75,8 @@ export default function Edit() {
   return (
     <div>
       <h3>Update Record</h3>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="edit-form-container">
+        {/* NAME */}
         <div className="form-group">
           <label htmlFor="name">Name: </label>
           <input
@@ -86,6 +87,8 @@ export default function Edit() {
             onChange={(e) => updateForm({ name: e.target.value })}
           />
         </div>
+
+        {/* POSITION */}
         <div className="form-group">
           <label htmlFor="position">Position: </label>
           <input
@@ -96,6 +99,8 @@ export default function Edit() {
             onChange={(e) => updateForm({ position: e.target.value })}
           />
         </div>
+
+        {/* SALARY */}
         <div className="form-group">
           <label htmlFor="position">Salary: </label>
           <input
@@ -108,7 +113,9 @@ export default function Edit() {
             onChange={(e) => updateForm({ salary: e.target.value })}
           />
         </div>
-        <div className="form-group">
+
+        {/* RADIO */}
+        <div className="form-group edit-level-container">
           <div className="form-check form-check-inline">
             <input
               className="form-check-input"
@@ -152,10 +159,9 @@ export default function Edit() {
             </label>
           </div>
         </div>
-        <br />
 
-        <div className="form-group">
-          <input type="submit" value="Update Record" className="btn btn-primary" />
+        <div className="form-group edit-submit-btn-container">
+          <input type="submit" value="Update Record" className="btn btn-primary edit-submit-btn" />
         </div>
       </form>
     </div>

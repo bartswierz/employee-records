@@ -90,7 +90,7 @@ export default function RecordList() {
             <th>Position</th>
             <th>Level</th>
             <th>Salary</th>
-            <th>Action</th>
+            <th className="action-header">Action</th>
           </tr>
         </thead>
         {/* RENDER RECORD COMPONENT */}
