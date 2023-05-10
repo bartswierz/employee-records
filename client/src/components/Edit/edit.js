@@ -59,23 +59,30 @@ export default function Edit() {
       salary: form.salary,
     };
 
-    //TODO - add a input check here to ensure all textboxes have data
-    const isInputValid = (form) => {
-      console.log("form: ", form);
+    // CHECK IF USER HAS FILLED OUT ALL FIELDS
+    const isInputValid = () => {
+      if (form.name === "" || form.position === "" || form.level === "" || form.salary === "") {
+        window.alert("Please fill out all form fields");
+        return false;
+      }
+      return true;
     };
 
-    isInputValid();
+    if (isInputValid()) {
+      // This will send a post request to update the data in the database.
+      await fetch(`http://localhost:5050/record/${params.id}`, {
+        method: "PATCH",
+        body: JSON.stringify(editedPerson),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }).catch((error) => {
+        window.alert(error);
+        return;
+      });
 
-    // This will send a post request to update the data in the database.
-    await fetch(`http://localhost:5050/record/${params.id}`, {
-      method: "PATCH",
-      body: JSON.stringify(editedPerson),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    navigate("/");
+      navigate("/");
+    }
   }
 
   // This following section will display the form that takes input from the user to update the data.

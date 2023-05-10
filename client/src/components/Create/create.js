@@ -28,21 +28,47 @@ export default function Create() {
     const newPerson = { ...form };
     console.log("newPerson: ", newPerson);
 
-    //POST REQUEST TO ADD USE DATA INTO OUR MONGODB
-    await fetch("http://localhost:5050/record", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newPerson),
-    }).catch((error) => {
-      window.alert(error);
-      return;
-    });
+    // CHECK IF USER HAS FILLED OUT ALL FIELDS
+    const isInputValid = () => {
+      if (form.name === "" || form.position === "" || form.level === "" || form.salary === "") {
+        window.alert("Please fill out all form fields");
+        return false;
+      }
+      return true;
+    };
 
-    // AFTER COMPLETING THE POST REQUEST, WE RESET THE FORM & NAVIGATE BACK TO HOME
-    setForm({ name: "", position: "", level: "", salary: 0 });
-    navigate("/");
+    if (isInputValid()) {
+      //POST REQUEST TO ADD USE DATA INTO OUR MONGODB
+      await fetch("http://localhost:5050/record", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newPerson),
+      }).catch((error) => {
+        window.alert(error);
+        return;
+      });
+
+      // AFTER COMPLETING THE POST REQUEST, WE RESET THE FORM & NAVIGATE BACK TO HOME
+      setForm({ name: "", position: "", level: "", salary: 0 });
+      navigate("/");
+    }
+    // //POST REQUEST TO ADD USE DATA INTO OUR MONGODB
+    // await fetch("http://localhost:5050/record", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(newPerson),
+    // }).catch((error) => {
+    //   window.alert(error);
+    //   return;
+    // });
+
+    // // AFTER COMPLETING THE POST REQUEST, WE RESET THE FORM & NAVIGATE BACK TO HOME
+    // setForm({ name: "", position: "", level: "", salary: 0 });
+    // navigate("/");
   }
 
   // This following section will display the form that takes the input from the user.
