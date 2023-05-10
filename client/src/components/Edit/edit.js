@@ -59,6 +59,13 @@ export default function Edit() {
       salary: form.salary,
     };
 
+    //TODO - add a input check here to ensure all textboxes have data
+    const isInputValid = (form) => {
+      console.log("form: ", form);
+    };
+
+    isInputValid();
+
     // This will send a post request to update the data in the database.
     await fetch(`http://localhost:5050/record/${params.id}`, {
       method: "PATCH",
