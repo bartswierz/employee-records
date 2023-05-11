@@ -2,26 +2,20 @@
   // Color of stars
   color: #1655a2;
   // font-family: "Poppins", sans-serif;
-  font-family: "Alata", sans-serif;
   // font-family: "Bebas Neue", sans-serif;
-  // min-width: 50vw;
+  font-family: "Alata", sans-serif;
   min-width: 300px;
   max-width: 900px;
-  // NEOMORPHISM
-  // border-radius: 37px;
-  // background: linear-gradient(225deg, #0c1b2d, #0a1726);
-  // box-shadow: -7px 7px 14px #091421, 7px -7px 14px #0d1f33;
 
   /* GLASS BACKGROUND */
   // background: rgba(255, 255, 255, 0.156);
-
   background: rgba(12, 27, 45, 0.156);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.6px);
   -webkit-backdrop-filter: blur(7.6px);
   border: 1px solid rgba(255, 255, 255, 0.48);
-  margin: 13vw;
+  margin: 8vw;
 }
 
 html {

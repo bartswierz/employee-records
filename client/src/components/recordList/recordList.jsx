@@ -20,9 +20,6 @@ const Record = ({ record, deleteRecord }) => {
         |
         <button
           className="btn btn-link"
-          // onClick={() => {
-          //   props.deleteRecord(_id);
-          // }}
           onClick={() => {
             deleteRecord(_id);
           }}
@@ -82,7 +79,6 @@ export default function RecordList() {
   return (
     <div className="recordlist-container">
       <h3 className="record-list-header">Employee Records</h3>
-      {/* <table className="table table-striped recordlist-container" style={{ marginTop: 20 }}> */}
       <table className="table recordlist-container" style={{ marginTop: 20 }}>
         <thead>
           <tr>
