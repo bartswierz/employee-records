@@ -1,7 +1,7 @@
 .app {
   // Color of stars
   color: #1655a2;
-  font-family: "Poppins", sans-serif;
+  // font-family: "Poppins", sans-serif;
   font-family: "Alata", sans-serif;
   // font-family: "Bebas Neue", sans-serif;
   // min-width: 50vw;
@@ -14,6 +14,7 @@
 
   /* GLASS BACKGROUND */
   // background: rgba(255, 255, 255, 0.156);
+
   background: rgba(12, 27, 45, 0.156);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -21,14 +22,13 @@
   -webkit-backdrop-filter: blur(7.6px);
   border: 1px solid rgba(255, 255, 255, 0.48);
   margin: 13vw;
-  // margin-left: 10vw;
 }
 
 html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 // KEEPS MAIN CONTAINER CENTERED ON SCREEN
@@ -39,7 +39,6 @@ body {
   min-height: 100vh;
   background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
   overflow: hidden;
-  // overflow-x: hidden;
 }
 
 label {
@@ -59,4 +58,92 @@ tbody tr:last-child td {
 
 td {
   vertical-align: middle;
+}
+
+// SCROLLBAR FOR CROSS-COMPABILITY
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1d31;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0064fa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0057da;
+}
+
+/* For Firefox */
+/* Note: Firefox doesn't support changing the scrollbar width */
+
+/* For Microsoft Edge and Internet Explorer */
+/* Note: Microsoft Edge and Internet Explorer use different pseudo-elements */
+
+/* For Microsoft Edge (EdgeHTML engine) */
+@supports (-ms-ime-align: auto) {
+  /* Styles for Microsoft Edge */
+  /* Note: EdgeHTML engine is used by older versions of Microsoft Edge */
+  ::-ms-scrollbar {
+    width: 12px;
+  }
+
+  ::-ms-scrollbar-track {
+    background: #0d1d31;
+  }
+
+  ::-ms-scrollbar-thumb {
+    background: #0064fa;
+  }
+
+  ::-ms-scrollbar-thumb:hover {
+    background: #0057da;
+  }
+}
+
+/* For Microsoft Edge (Blink engine) and Internet Explorer 10+ */
+@supports (-ms-accelerator: true) {
+  /* Styles for Microsoft Edge (Blink engine) and Internet Explorer 10+ */
+  /* Note: Blink engine is used by newer versions of Microsoft Edge */
+  /* Note: Internet Explorer 10+ supports both EdgeHTML and Blink engines */
+  *::-ms-scrollbar {
+    width: 12px;
+  }
+
+  *::-ms-scrollbar-track {
+    background: #0d1d31;
+  }
+
+  *::-ms-scrollbar-thumb {
+    background: #0064fa;
+  }
+
+  *::-ms-scrollbar-thumb:hover {
+    background: #0057da;
+  }
+}
+
+/* For Opera */
+@supports (overflow: overlay) {
+  /* Styles for Opera */
+  /* Note: Opera uses a different property for enabling overlay scrollbars */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0d1d31;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #0064fa;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0057da;
+  }
 }

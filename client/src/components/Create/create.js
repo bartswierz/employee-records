@@ -28,14 +28,6 @@ export default function Create() {
     const newPerson = { ...form };
     console.log("newPerson: ", newPerson);
 
-    // // CHECK IF USER HAS FILLED OUT ALL FIELDS
-    // const isInputValid = () => {
-    //   if (form.name === "" || form.position === "" || form.level === "" || form.salary === "") {
-    //     window.alert("Please fill out all form fields");
-    //     return false;
-    //   }
-    //   return true;
-    // };
     // CHECK IF USER HAS FILLED OUT ALL FIELDS
     const isInputValid = () => {
       if (
@@ -69,29 +61,13 @@ export default function Create() {
       setForm({ name: "", position: "", level: "", salary: 0 });
       navigate("/");
     }
-    // //POST REQUEST TO ADD USE DATA INTO OUR MONGODB
-    // await fetch("http://localhost:5050/record", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(newPerson),
-    // }).catch((error) => {
-    //   window.alert(error);
-    //   return;
-    // });
-
-    // // AFTER COMPLETING THE POST REQUEST, WE RESET THE FORM & NAVIGATE BACK TO HOME
-    // setForm({ name: "", position: "", level: "", salary: 0 });
-    // navigate("/");
   }
 
   // This following section will display the form that takes the input from the user.
   return (
     <div>
-      <h3 className="create-title">Create New Record</h3>
+      <h3 className="create-title">New Employee</h3>
       <form onSubmit={onSubmit} className="create-form-container">
-        {/* <div className="create-form-item-container"> */}
         {/* NAME */}
         <div className="form-group">
           <label htmlFor="name">Name</label>
@@ -183,7 +159,6 @@ export default function Create() {
         <div className="form-group create-submit-btn-container">
           <input type="submit" value="Add Employee" className="btn btn-primary create-submit-btn" />
         </div>
-        {/* </div> */}
       </form>
     </div>
   );

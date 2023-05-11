@@ -8,6 +8,7 @@ import { NavLink } from "react-router-dom";
 import "./navbar.styles.scss";
 import AsteroidIcon from "../../assets/images/asteroid-icon.png";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
+import { Button } from "@mui/material";
 
 // In the navbar.js component, we will create a navigation bar that will link us to the required components using the following code.
 // Here, we display our Navbar
@@ -23,7 +24,9 @@ export default function Navbar() {
       </NavLink>
 
       <NavLink className="nav-link" to="/create">
-        <PersonAddAlt1Icon sx={{ color: "#0064fa", width: "40px", height: "auto" }} />
+        <Button sx={{ borderRadius: "50%" }}>
+          <PersonAddAlt1Icon sx={{ color: "#0064fa", width: "40px", height: "auto" }} />
+        </Button>
       </NavLink>
     </div>
   );
