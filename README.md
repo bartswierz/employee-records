@@ -48,6 +48,15 @@ To run the application locally, follow the steps below:
 
 4. Create a free MongoDB account and create a free-tier server cluster to obtain the Connection String to connect our app to our cluster. Follow this quick 5-minute video of setting up your very own free-tier cluster! This step is a MUST to get the URI for our ".env" file. Video: https://www.youtube.com/watch?v=jXgJyuBeb_o. The Connection string will look like this: 
   mongodb+srv://username:password@cluster.abcdefg.mongodb.net/?retryWrites=true&w=majority
+  
+5. Create a '.env' file inside our server directory and paste in your connection string to connect our app to our MongoDB cluster:
+
+![image](https://github.com/bartswierz/employee-records/assets/100662080/d2943c0a-daad-4916-a4ee-10787b44d63d)
+
+6. Application is ready! Create a new employee, and if everything was setup correctly, we should have a successful fetch and POST into our MongoDB Cluster!
+
+![image](https://github.com/bartswierz/employee-records/assets/100662080/82943272-eeeb-4a37-aa32-7c424bde3c21)
+
 
 ## Usage
 
