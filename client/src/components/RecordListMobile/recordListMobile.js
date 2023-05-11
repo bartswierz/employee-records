@@ -16,13 +16,29 @@ const Record = ({ record, deleteRecord }) => {
     width: "100%",
     backgroundColor: "transparent",
     color: "#fff",
-    border: "1px solid #fff",
+    borderTop: "1px solid #999",
+    borderBottom: "1px solid #999",
   };
 
   return (
     <Card sx={cardSX}>
-      <CardMedia component="img" height="140" src={<PersonIcon />} alt={name} />
-      <CardContent className="employee-card-content">
+      {/* <CardMedia component="img" height="140" src={<PersonIcon />} alt={name} /> */}
+      <CardMedia
+        alt={name}
+        sx={{
+          width: "70%",
+          height: "auto",
+          margin: "0 auto",
+          marginTop: "15px",
+        }}
+      >
+        <PersonIcon sx={{ width: "100%", height: "auto", backgroundColor: "#0064fa", borderRadius: "50%" }} />
+      </CardMedia>
+      {/* <CardMedia component="img" sx={{ height: 200, width: 200 }} image={<PersonIcon />} alt={name} /> */}
+      <CardContent
+        className="employee-card-content"
+        sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}
+      >
         <Typography gutterBottom variant="h5" component="div" sx={{ color: "#fff" }}>
           {name}
         </Typography>
@@ -31,13 +47,14 @@ const Record = ({ record, deleteRecord }) => {
         <Typography variant="body1">Salary: ${salary}</Typography>
       </CardContent>
       {/* EDIT & DELETE BUTTONS */}
-      <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Link to={`/edit/${_id}`} sx={{ flex: "1" }}>
-          <Button variant="contained" endIcon={<EditIcon />}>
+      {/* <CardActions sx={{ display: "flex", justifyContent: "space-between" }}> */}
+      <CardActions sx={{ display: "flex", justifyContent: "space-around", paddingBottom: "20px" }}>
+        <Link to={`/edit/${_id}`} style={{ width: "45%" }}>
+          <Button variant="contained" endIcon={<EditIcon />} sx={{ width: "100%" }}>
             Edit
           </Button>
         </Link>
-        <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => deleteRecord(record)}>
+        <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => deleteRecord(record)} sx={{ width: "45%" }}>
           Delete
         </Button>
       </CardActions>
