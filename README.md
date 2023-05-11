@@ -36,7 +36,8 @@ This project focuses on using CRUD operations
 
 To run the application locally, follow the steps below:
 1. Create an empty directory and navigate into the folder(i.e. cd polaris-project)
-2. git clone https://github.com/bartswierz/employee-records.git. Your repository should look like this: 
+2. Clone the repository using the command: git clone https://github.com/bartswierz/employee-records.git. 
+  Your repository should look like this: 
 
   ![image](https://github.com/bartswierz/employee-records/assets/100662080/31bf8c91-8a6a-4d39-98f8-72643275a4d9)
   
@@ -60,7 +61,7 @@ To run the application locally, follow the steps below:
  - Navigate into the client directory via VSCode Terminal and run the command "npm start"
   ![image](https://github.com/bartswierz/employee-records/assets/100662080/1ebffde9-c3d5-4c89-b8f1-c234e09d92a7)
 
-7. Application setup is complete! Create a new employee, and if everything was setup correctly, we should have a successful fetch and POST into our MongoDB Cluster!
+7. Application setup is complete! Create a new employee, and if everything was setup correctly, we will have a successful fetch and POST into our MongoDB Cluster!
 
 ![image](https://github.com/bartswierz/employee-records/assets/100662080/82943272-eeeb-4a37-aa32-7c424bde3c21)
 
