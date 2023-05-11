@@ -53,10 +53,16 @@ To run the application locally, follow the steps below:
 
 ![image](https://github.com/bartswierz/employee-records/assets/100662080/d2943c0a-daad-4916-a4ee-10787b44d63d)
 
-6. Application is ready! Create a new employee, and if everything was setup correctly, we should have a successful fetch and POST into our MongoDB Cluster!
+6. Start up the server and client. 
+ - Navigate into the server directory via VSCode Terminal and run the command "npm run dev"
+![image](https://github.com/bartswierz/employee-records/assets/100662080/45eb1c31-c7bd-482c-a98a-acaae4d4cc17)
+
+ - Navigate into the client directory via VSCode Terminal and run the command "npm start"
+  ![image](https://github.com/bartswierz/employee-records/assets/100662080/1ebffde9-c3d5-4c89-b8f1-c234e09d92a7)
+
+7. Application setup is complete! Create a new employee, and if everything was setup correctly, we should have a successful fetch and POST into our MongoDB Cluster!
 
 ![image](https://github.com/bartswierz/employee-records/assets/100662080/82943272-eeeb-4a37-aa32-7c424bde3c21)
-
 
 ## Usage
 
