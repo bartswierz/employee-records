@@ -1,40 +1,51 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./recordList.styles.scss";
+import "./recordListMobile.styles.scss";
+import PersonIcon from "@mui/icons-material/Person";
+import { Card, CardContent, CardMedia, Typography, IconButton, CardActions, Button } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 
 // The following code will serve as a viewing component for our records. It will fetch all the records in our database through a GET method.
-// const Record = (props) => (
 const Record = ({ record, deleteRecord }) => {
-  // console.log('Record props passed: ', props);
   const { _id, name, position, level, salary } = record;
+  // const { name, position, level, salary, imageUrl } = record;
+
+  const cardSX = {
+    maxWidth: 345,
+    width: "100%",
+    backgroundColor: "transparent",
+    color: "#fff",
+    border: "1px solid #fff",
+  };
+
   return (
-    <tr>
-      <td>{name}</td>
-      <td>{position}</td>
-      <td>{level}</td>
-      <td>${salary}</td>
-      <td>
-        <Link className="btn btn-link" to={`/edit/${_id}`}>
-          Edit
+    <Card sx={cardSX}>
+      <CardMedia component="img" height="140" src={<PersonIcon />} alt={name} />
+      <CardContent className="employee-card-content">
+        <Typography gutterBottom variant="h5" component="div" sx={{ color: "#fff" }}>
+          {name}
+        </Typography>
+        <Typography variant="body1">Position: {position}</Typography>
+        <Typography variant="body1">Level: {level}</Typography>
+        <Typography variant="body1">Salary: ${salary}</Typography>
+      </CardContent>
+      {/* EDIT & DELETE BUTTONS */}
+      <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Link to={`/edit/${_id}`} sx={{ flex: "1" }}>
+          <Button variant="contained" endIcon={<EditIcon />}>
+            Edit
+          </Button>
         </Link>
-        |
-        <button
-          className="btn btn-link"
-          // onClick={() => {
-          //   props.deleteRecord(_id);
-          // }}
-          onClick={() => {
-            deleteRecord(_id);
-          }}
-        >
+        <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => deleteRecord(record)}>
           Delete
-        </button>
-      </td>
-    </tr>
+        </Button>
+      </CardActions>
+    </Card>
   );
 };
 
-export default function RecordList() {
+export default function RecordListMobile() {
   const [records, setRecords] = useState([]);
 
   // This method fetches the records from the database.
@@ -82,20 +93,8 @@ export default function RecordList() {
   return (
     <div className="recordlist-container">
       <h3 className="record-list-header">Employee Records</h3>
-      {/* <table className="table table-striped recordlist-container" style={{ marginTop: 20 }}> */}
-      <table className="table recordlist-container" style={{ marginTop: 20 }}>
-        <thead>
-          <tr>
-            <th className="name-header">Name</th>
-            <th className="position-header">Position</th>
-            <th className="level-header">Level</th>
-            <th className="salary-header">Salary</th>
-            <th className="action-header">Action</th>
-          </tr>
-        </thead>
-        {/* RENDER RECORD COMPONENT */}
-        <tbody>{recordList()}</tbody>
-      </table>
+      {/* RENDER RECORD COMPONENT */}
+      {recordList()}
     </div>
   );
 }

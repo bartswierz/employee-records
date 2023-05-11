@@ -17,11 +17,11 @@
   background: rgba(12, 27, 45, 0.156);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  // backdrop-filter: blur(7.6px);
-  backdrop-filter: blur(57.6px);
-  // -webkit-backdrop-filter: blur(7.6px);
-  -webkit-backdrop-filter: blur(57.6px);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(7.6px);
   border: 1px solid rgba(255, 255, 255, 0.48);
+  margin: 13vw;
+  // margin-left: 10vw;
 }
 
 html {
@@ -39,6 +39,7 @@ body {
   min-height: 100vh;
   background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
   overflow: hidden;
+  // overflow-x: hidden;
 }
 
 label {
