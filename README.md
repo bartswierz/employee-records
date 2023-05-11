@@ -35,6 +35,12 @@ This project focuses on using CRUD operations
 ## Getting Started
 
 To run the application locally, follow the steps below:
+1. Create an empty directory and navigate into the folder(i.e. cd polaris-project)
+2. git clone https://github.com/bartswierz/employee-records.git. Your repository should look like this: 
+  ![image](https://github.com/bartswierz/employee-records/assets/100662080/31bf8c91-8a6a-4d39-98f8-72643275a4d9)
+3. Install node packages for the client and server directories by navigating into the client directory & server directory, and use the command "npm install"
+    ![image](https://github.com/bartswierz/employee-records/assets/100662080/fd6f6100-0912-4a04-a486-2d48d724e611)
+
 
 ## Usage
 
