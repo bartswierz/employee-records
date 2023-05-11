@@ -12,7 +12,6 @@
 
 ## Project Overview
 
-Provide an overview of your project. Explain what it does, why it is useful, and any other relevant information.
 MERN stack project built with MongoDB, ExpressJS, React, and NodeJS, SCSS, and Material UI showing CRUD functionality for employees at the current company. My MERN stack application features a captivating space theme that adds an immersive and visually stunning experience for users. The highlight of this theme is an animated star background that gracefully traverses across the screen, creating a sense of movement and depth reminiscent of a space voyage. This project can be used as a useful tool to learn the MERN stack as the logic is easy to follow and can be used as a foundation for your own MERN stack applications.
 
 ## Features
@@ -31,6 +30,7 @@ This project focuses on using CRUD operations
 - React.js: JavaScript library for building the user interface components.
 - Node.js: JavaScript runtime for executing server-side code.
 - Material UI: Material-UI is a popular React UI library that provides pre-built components following the Material Design guidelines. With its rich set of components and seamless integration with React, Material-UI is a powerful tool for creating beautiful and responsive user interfaces in MERN stack applications.
+- SCSS: SCSS (Sass) is a popular CSS preprocessor that extends the capabilities of traditional CSS. It helps write cleaner and more organized CSS code, resulting in improved development workflows and easier maintenance of stylesheets.
 
 ## Getting Started
 
