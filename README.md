@@ -6,6 +6,7 @@
 
 - [Project Overview](#project-overview)
 - [Features](#features)
+- [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 
@@ -23,6 +24,15 @@ This project focuses on using CRUD operations
 - Employee Deletion: Remove employees from MongoDB, permanently deleting their records.
 - Data Validation: Validate user input to ensure the integrity and consistency of employee records. Perform checks on required fields, data types, and any custom validation rules.
 - Responsive Design: Develop a responsive user interface that adapts to different screen sizes and devices, allowing users to access and manage employee records from desktop and mobile devices. Large viewport devices display a table, whereas small viewport devices display individual row data as a card component.
+
+## Technologies Used
+- MongoDB: NoSQL database for storing employee records.
+- Express.js: Web application framework for building the server-side RESTful API.
+- React.js: JavaScript library for building the user interface components.
+- Node.js: JavaScript runtime for executing server-side code.
+- Material UI: Material-UI is a popular React UI library that provides pre-built components following the Material Design guidelines. With its rich set of components and seamless integration with React, Material-UI is a powerful tool for creating beautiful and responsive user interfaces in MERN stack applications.
+
+
 
 
 ## Getting Started
