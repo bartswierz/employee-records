@@ -32,16 +32,9 @@ This project focuses on using CRUD operations
 - Node.js: JavaScript runtime for executing server-side code.
 - Material UI: Material-UI is a popular React UI library that provides pre-built components following the Material Design guidelines. With its rich set of components and seamless integration with React, Material-UI is a powerful tool for creating beautiful and responsive user interfaces in MERN stack applications.
 
-
-
-
 ## Getting Started
 
 To run the application locally, follow the steps below:
-
-## Installation
-
-Provide instructions on how to install and set up your project. Include any prerequisites and dependencies that need to be installed.
 
 ## Usage
 
