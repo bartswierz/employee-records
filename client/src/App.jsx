@@ -39,7 +39,6 @@ const App = () => {
         ) : (
           <Route exact path="/" element={<RecordList />} />
         )}
-        {/* <Route exact path="/" element={<RecordListMobile />} /> */}
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/create" element={<Create />} />
       </Routes>
